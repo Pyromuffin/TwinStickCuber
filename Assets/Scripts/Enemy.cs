@@ -7,6 +7,8 @@ public class Enemy : MonoBehaviour {
     public float speed;
     public GameObject target;
     public ForceMode mode;
+    public GameObject pickupPrefab;
+    public int pickupCount;
 
 	// Use this for initialization
 	void Start () {
@@ -18,18 +20,24 @@ public class Enemy : MonoBehaviour {
     {
         if (hit.gameObject.layer ==  LayerMask.NameToLayer("Bullet") )
         {
-            
-            Destroy(gameObject);
+
+            for (int i = 0; i < pickupCount; i++)
+            {
+                var pickup = Instantiate(pickupPrefab, transform.position, Quaternion.identity) as GameObject;
+                pickup.rigidbody.velocity = Random.insideUnitSphere;
+            }
+
             Arena.instance.enemies.Remove(this);
             Destroy(hit.gameObject);
+            Destroy(gameObject);
             
 
         }
          
         else if (hit.transform.tag == "Dude")
         {
-            Destroy(hit.transform.gameObject);
-            Destroy(gameObject);
+            //Destroy(hit.transform.gameObject);
+            //Destroy(gameObject);
         }
     }
 

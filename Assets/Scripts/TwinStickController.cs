@@ -2,16 +2,7 @@
 using System.Collections;
 using GamepadInput;
 
-    [System.Serializable]
-public struct ChargeShotParameters
-{
-}
 
-[System.Serializable]
-public struct bulletParameters
-{
-   
-}
 
 public class TwinStickController : MonoBehaviour {
 
@@ -31,6 +22,9 @@ public class TwinStickController : MonoBehaviour {
     private float reloadTimer, chargeTimer;
     private bool charging;
 
+    public int childCount;
+    public float torquePerChild;
+
     private GameObject chargeShot;
 
 	// Use this for initialization
@@ -38,7 +32,11 @@ public class TwinStickController : MonoBehaviour {
 
         
 	}
-	
+    public void increaseChild()
+    {
+        childCount++;
+    }
+
 	// Update is called once per frame
 	void FixedUpdate () {
         pad = GamePad.GetState(player);
@@ -48,7 +46,8 @@ public class TwinStickController : MonoBehaviour {
         //rigidbody.AddForce(dir * maxSpeed);
 
         rigidbody.AddForce(Vector3.down * downForce);
-        rigidbody.AddTorque(Vector3.Cross(Vector3.up, dir) * dir.magnitude * maxSpeed);
+        var torqueVector = Vector3.Cross(Vector3.up, dir);
+        rigidbody.AddTorque(( torqueVector * dir.magnitude * maxSpeed) + (torqueVector * dir.magnitude * torquePerChild * childCount) );
 
         reloadTimer -= Mathf.Min(reloadTimer, Time.fixedDeltaTime);
 
@@ -58,9 +57,6 @@ public class TwinStickController : MonoBehaviour {
             Shoot(pad.rightStickAxis.normalized);
             reloadTimer = reloadTime;
         }
-
-
-        
 
         if (pad.RightTrigger > .1f)
         {

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.Twin Stick Cuber.CSharp.Editor", "UnityVS.Twin Stick Cuber.CSharp.Editor.csproj", "{9472DC99-084F-6172-99C0-802021ECFC5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.Twin Stick Cuber.CSharp", "UnityVS.Twin Stick Cuber.CSharp.csproj", "{E059E49E-3CC5-48EF-3019-B42B280F4E8A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9472DC99-084F-6172-99C0-802021ECFC5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9472DC99-084F-6172-99C0-802021ECFC5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9472DC99-084F-6172-99C0-802021ECFC5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9472DC99-084F-6172-99C0-802021ECFC5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E059E49E-3CC5-48EF-3019-B42B280F4E8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E059E49E-3CC5-48EF-3019-B42B280F4E8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E059E49E-3CC5-48EF-3019-B42B280F4E8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E059E49E-3CC5-48EF-3019-B42B280F4E8A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
