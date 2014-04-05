@@ -74,10 +74,10 @@
       <HintPath>Assets\PrimitivesPro\Scripts\Triangulation\Poly2Tri.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:\Program Files (x86)\Unity\Data\UnityExtensions\Unity\GUISystem\4.6.0\Editor\UnityEditor.UI.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Unity\Editor\Data\UnityExtensions\Unity\GUISystem\4.6.0\Editor\UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:\Program Files (x86)\Unity\Data\UnityExtensions\Unity\GUISystem\4.6.0\UnityEngine.UI.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Unity\Editor\Data\UnityExtensions\Unity\GUISystem\4.6.0\UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -189,7 +189,8 @@
     <None Include="Assets\Packages\UnityVS\Editor\SyntaxTree.VisualStudio.Unity.Bridge.dll" />
     <None Include="Assets\Packages\UnityVS\Editor\SyntaxTree.VisualStudio.Unity.Messaging.dll" />
     <None Include="Assets\Packages\UnityVS\Editor\UnityVS.VersionSpecific.dll" />
-    <None Include="C:\Program Files (x86)\Unity\Data\UnityExtensions\Unity\GUISystem\4.6.0\Editor\UnityEditor.UI.dll" />
+    <None Include="C:\Program Files (x86)\Unity\Editor\Data\UnityExtensions\Unity\GUISystem\4.6.0\Editor\UnityEditor.UI.dll" />
+    <None Include="C:\Program Files (x86)\Unity\Editor\Data\UnityExtensions\Unity\GUISystem\4.6.0\UnityEngine.UI.dll" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets" />
@@ -219,12 +220,13 @@
     <Folder Include="C:" />
     <Folder Include="C:\Program Files (x86)" />
     <Folder Include="C:\Program Files (x86)\Unity" />
-    <Folder Include="C:\Program Files (x86)\Unity\Data" />
-    <Folder Include="C:\Program Files (x86)\Unity\Data\UnityExtensions" />
-    <Folder Include="C:\Program Files (x86)\Unity\Data\UnityExtensions\Unity" />
-    <Folder Include="C:\Program Files (x86)\Unity\Data\UnityExtensions\Unity\GUISystem" />
-    <Folder Include="C:\Program Files (x86)\Unity\Data\UnityExtensions\Unity\GUISystem\4.6.0" />
-    <Folder Include="C:\Program Files (x86)\Unity\Data\UnityExtensions\Unity\GUISystem\4.6.0\Editor" />
+    <Folder Include="C:\Program Files (x86)\Unity\Editor" />
+    <Folder Include="C:\Program Files (x86)\Unity\Editor\Data" />
+    <Folder Include="C:\Program Files (x86)\Unity\Editor\Data\UnityExtensions" />
+    <Folder Include="C:\Program Files (x86)\Unity\Editor\Data\UnityExtensions\Unity" />
+    <Folder Include="C:\Program Files (x86)\Unity\Editor\Data\UnityExtensions\Unity\GUISystem" />
+    <Folder Include="C:\Program Files (x86)\Unity\Editor\Data\UnityExtensions\Unity\GUISystem\4.6.0" />
+    <Folder Include="C:\Program Files (x86)\Unity\Editor\Data\UnityExtensions\Unity\GUISystem\4.6.0\Editor" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.UnityScript.targets" />
 </Project>

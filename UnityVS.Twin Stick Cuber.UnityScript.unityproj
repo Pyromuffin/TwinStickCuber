@@ -61,9 +61,6 @@
     <Reference Include="Poly2Tri">
       <HintPath>Assets\PrimitivesPro\Scripts\Triangulation\Poly2Tri.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>C:\Program Files (x86)\Unity\Data\UnityExtensions\Unity\GUISystem\4.6.0\UnityEngine.UI.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Packages\Standard Assets\Image Effects (Pro Only)\AmbientObscurance.js" />
@@ -176,7 +173,6 @@
     <None Include="Assets\6by7\ProBuilder\Classes\ProBuilderCore.dll" />
     <None Include="Assets\6by7\Shared\Code\SixBySeven.dll" />
     <None Include="Assets\PrimitivesPro\Scripts\Triangulation\Poly2Tri.dll" />
-    <None Include="C:\Program Files (x86)\Unity\Data\UnityExtensions\Unity\GUISystem\4.6.0\UnityEngine.UI.dll" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets" />
@@ -204,14 +200,6 @@
     <Folder Include="Assets\PrimitivesPro\Scripts" />
     <Folder Include="Assets\PrimitivesPro\Scripts\Triangulation" />
     <Folder Include="Assets\XInputDotNet" />
-    <Folder Include="C:" />
-    <Folder Include="C:\Program Files (x86)" />
-    <Folder Include="C:\Program Files (x86)\Unity" />
-    <Folder Include="C:\Program Files (x86)\Unity\Data" />
-    <Folder Include="C:\Program Files (x86)\Unity\Data\UnityExtensions" />
-    <Folder Include="C:\Program Files (x86)\Unity\Data\UnityExtensions\Unity" />
-    <Folder Include="C:\Program Files (x86)\Unity\Data\UnityExtensions\Unity\GUISystem" />
-    <Folder Include="C:\Program Files (x86)\Unity\Data\UnityExtensions\Unity\GUISystem\4.6.0" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.UnityScript.targets" />
 </Project>

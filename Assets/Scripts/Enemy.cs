@@ -9,10 +9,15 @@ public class Enemy : MonoBehaviour {
     public ForceMode mode;
     public GameObject pickupPrefab;
     public int pickupCount;
+    public AudioClip dieSound, cutDie;
+    private TwinStickController targetController;
+    private TwinStickController[] targets;
 
 	// Use this for initialization
 	void Start () {
-        target = FindObjectOfType<TwinStickController>().gameObject;
+        targets = FindObjectsOfType<TwinStickController>();
+        targetController = targets[Random.Range(0, targets.Length)];
+        target = targetController.gameObject;
         Arena.instance.enemies.Add(this);
 	}
 
@@ -29,6 +34,7 @@ public class Enemy : MonoBehaviour {
 
             Arena.instance.enemies.Remove(this);
             Destroy(hit.gameObject);
+            AudioSource.PlayClipAtPoint(dieSound, Vector3.zero);
             Destroy(gameObject);
             
 
@@ -54,6 +60,15 @@ public class Enemy : MonoBehaviour {
             var mf2 = m2.AddComponent<MeshFilter>();
             var mr1 = m1.AddComponent<MeshRenderer>();
             var mr2 = m2.AddComponent<MeshRenderer>();
+            var pickup1 = m1.AddComponent<PickUP>();
+            var pickup2 = m2.AddComponent<PickUP>();
+            pickup1.value = 200;
+            pickup2.value = 200;
+
+            m1.layer = LayerMask.NameToLayer("Pick up");
+            m2.layer = LayerMask.NameToLayer("Pick up");
+
+           
 
             var p1 = transform.InverseTransformPoint(hit.contacts[0].point);
             var p2 = transform.InverseTransformPoint(hit.transform.position);
@@ -71,12 +86,20 @@ public class Enemy : MonoBehaviour {
             var col1 = m1.AddComponent<MeshCollider>();
             col1.convex = true; 
             m1.AddComponent<Rigidbody>();
+            m1.rigidbody.mass = .2f;
+            m1.rigidbody.velocity = rigidbody.velocity;
+            m1.rigidbody.angularVelocity = rigidbody.angularVelocity;
 
             var col2 = m2.AddComponent<MeshCollider>();
             col2.convex = true;
             m2.AddComponent<Rigidbody>();
+            m2.rigidbody.mass = .2f;
+            m2.rigidbody.velocity = rigidbody.velocity;
+            m2.rigidbody.angularVelocity = rigidbody.angularVelocity;
 
             Arena.instance.enemies.Remove(this);
+            
+            AudioSource.PlayClipAtPoint(cutDie, Vector3.zero);
             Destroy(gameObject);
         }
     }
@@ -86,6 +109,13 @@ public class Enemy : MonoBehaviour {
         var direction =  target.transform.position - transform.position;
         direction.Normalize();
         rigidbody.AddTorque(Vector3.Cross( Vector3.up, direction) * speed, mode);
+
+        if (targetController.dead)
+        {
+            targetController = targets[Random.Range(0, targets.Length)];
+            target = targetController.gameObject;
+        }
+            
 	}
 
 

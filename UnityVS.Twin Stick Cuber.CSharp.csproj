@@ -61,15 +61,13 @@
     <Reference Include="Poly2Tri">
       <HintPath>Assets\PrimitivesPro\Scripts\Triangulation\Poly2Tri.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>C:\Program Files (x86)\Unity\Data\UnityExtensions\Unity\GUISystem\4.6.0\UnityEngine.UI.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\6by7\ProBuilder\API Examples\Instantiation\ProBuilderInstantiate.cs" />
     <Compile Include="Assets\6by7\ProBuilder\API Examples\Runtime Editing\Materials\pb_Selection.cs" />
     <Compile Include="Assets\6by7\ProBuilder\API Examples\Runtime Editing\RuntimeEdit.cs" />
     <Compile Include="Assets\BisectTest.cs" />
+    <Compile Include="Assets\Bullet.cs" />
     <Compile Include="Assets\Packages\Standard Assets\Image Effects (Pro Only)\BlurEffect.cs" />
     <Compile Include="Assets\Packages\Standard Assets\Image Effects (Pro Only)\ColorCorrectionEffect.cs" />
     <Compile Include="Assets\Packages\Standard Assets\Image Effects (Pro Only)\ContrastStretchEffect.cs" />
@@ -145,6 +143,7 @@
     <Compile Include="Assets\PrimitivesPro\Scripts\Utils\ObjExporter.cs" />
     <Compile Include="Assets\PrimitivesPro\Scripts\Utils\Plane.cs" />
     <Compile Include="Assets\PrimitivesPro\Scripts\Utils\Utils.cs" />
+    <Compile Include="Assets\ScoreDisplay.cs" />
     <Compile Include="Assets\Scripts\Arena.cs" />
     <Compile Include="Assets\Scripts\ChargeBullet.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
@@ -238,7 +237,6 @@
     <None Include="Assets\6by7\ProBuilder\Classes\ProBuilderCore.dll" />
     <None Include="Assets\6by7\Shared\Code\SixBySeven.dll" />
     <None Include="Assets\PrimitivesPro\Scripts\Triangulation\Poly2Tri.dll" />
-    <None Include="C:\Program Files (x86)\Unity\Data\UnityExtensions\Unity\GUISystem\4.6.0\UnityEngine.UI.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.CSharp.targets" />
 </Project>

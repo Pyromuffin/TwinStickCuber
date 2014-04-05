@@ -5,8 +5,8 @@ public class ChargeBullet : MonoBehaviour {
 
     public GameObject bulletSpawnPrefab;
     public int spawnCount;
+    public bool charged;
     public float bulletSpawnSpeed;
-    public float life;
     private bool isQuitting;
 
 	// Use this for initialization
@@ -21,13 +21,13 @@ public class ChargeBullet : MonoBehaviour {
 
     void OnDestroy()
     {
-        if (!isQuitting)
+        if (!isQuitting && charged)
         {
             for (int i = 0; i < spawnCount; i++)
             {
                 var bullet = Instantiate(bulletSpawnPrefab, transform.position, Quaternion.identity) as GameObject;
                 bullet.rigidbody.velocity = Random.insideUnitSphere * bulletSpawnSpeed + rigidbody.velocity/10;
-                Destroy(bullet, life);
+                
             }
         }
        
