@@ -4,7 +4,7 @@ using System.Collections;
 
 public class ScoreDisplay : MonoBehaviour {
 
-    public int player;
+    public playerIndex player;
 
 
     public int Score

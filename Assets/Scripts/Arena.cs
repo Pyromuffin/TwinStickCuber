@@ -36,6 +36,7 @@ public class Arena : MonoBehaviour {
                 p.dead = false;
                 p.enabled = true;
                 p.renderer.enabled = true;
+                p.laserSword.SetActive(true);
             }
         }
 

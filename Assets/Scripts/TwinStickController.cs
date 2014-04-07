@@ -14,7 +14,7 @@ public class TwinStickController : MonoBehaviour {
     public float maxChargeTime, chargeShotDistance, chargeShotSize, chargeShotForceModifier;
     public GameObject chargeShotPrefab;
 
-    public GameObject laserSword;
+    public GameObject laserSword, laserSwordPrefab;
 
     //laser sword
     public float laserSwordDistance;
@@ -40,11 +40,15 @@ public class TwinStickController : MonoBehaviour {
 
     //sound effects
     public AudioClip shoot, charge, chargeShootSound, chargedSound, pickUp, swing, move, gravityWell, repel, dieSound;
+    public AudioSource moveSource;
+    public float moveSpeedFrequency;
+    private float moveSpeedCounter;
 
 	// Use this for initialization
 	void Start () {
         pad = new PyroPad(player);
-        
+        laserSword = Instantiate(laserSwordPrefab) as GameObject;
+        scoreDisplay = FindObjectsOfType<ScoreDisplay>().Where(s => s.player == player).First();
 	}
     
 
@@ -63,7 +67,16 @@ public class TwinStickController : MonoBehaviour {
         reloadTimer -= Mathf.Min(reloadTimer, Time.fixedDeltaTime);
 
 
+        //move sound
+        if (moveSpeedCounter <= 0)
+        {
 
+            moveSource.pitch = rigidbody.angularVelocity.magnitude / 20;
+            moveSource.PlayOneShot(move,.25f);
+            
+            moveSpeedCounter = moveSpeedFrequency;
+        }
+        moveSpeedCounter -= rigidbody.angularVelocity.magnitude * Time.fixedDeltaTime;
 
 
         //laser swording
@@ -75,7 +88,8 @@ public class TwinStickController : MonoBehaviour {
                 laserSword.transform.localScale = new Vector3(.1f, .1f, pad.RightStick.magnitude * laserSwordDistance);
                 laserSword.transform.position = Vector3.Lerp(laserSword.transform.position, transform.position + rightDir * laserSwordDistance / 2, laserSwordLerpTime);
 
-                laserSword.transform.forward = rightDir;
+                if (rightDir != Vector3.zero)
+                    laserSword.transform.forward = rightDir;
             }
             
             if (rightDir.magnitude >= .9)
@@ -167,7 +181,8 @@ public class TwinStickController : MonoBehaviour {
             }
             chargeShot.transform.position = transform.position + new Vector3(rightDir.x, 1 * strength, rightDir.z) * chargeShotDistance;
             chargeShot.transform.localScale = Vector3.one * strength * chargeShotSize;
-            chargeShot.transform.forward = rightDir;
+            if(rightDir != Vector3.zero)
+                chargeShot.transform.forward = rightDir;
             chargeTimer += Mathf.Min(Time.fixedDeltaTime, maxChargeTime - chargeTimer);
             
         }
@@ -255,7 +270,9 @@ public class TwinStickController : MonoBehaviour {
             dead = true;
             audio.PlayOneShot(dieSound);
             renderer.enabled = false;
+            laserSword.SetActive(false);
             this.enabled = false;
+
            
         }
     }

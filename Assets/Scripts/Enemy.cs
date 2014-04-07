@@ -115,7 +115,12 @@ public class Enemy : MonoBehaviour {
             targetController = targets[Random.Range(0, targets.Length)];
             target = targetController.gameObject;
         }
-            
+
+        if (transform.position.y <= -10)
+        {
+            Arena.instance.enemies.Remove(this);
+            Destroy(gameObject);
+        }
 	}
 
 
