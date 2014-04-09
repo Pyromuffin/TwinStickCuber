@@ -70,24 +70,15 @@
     <Reference Include="XInputDotNetPure">
       <HintPath>Assets\Plugins\x86_64\XInputDotNetPure.dll</HintPath>
     </Reference>
-    <Reference Include="Poly2Tri">
-      <HintPath>Assets\PrimitivesPro\Scripts\Triangulation\Poly2Tri.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>C:\Program Files (x86)\Unity\Editor\Data\UnityExtensions\Unity\GUISystem\4.6.0\Editor\UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>C:\Program Files (x86)\Unity\Editor\Data\UnityExtensions\Unity\GUISystem\4.6.0\UnityEngine.UI.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="UnityVS.Twin Stick Cuber.CSharp.csproj">
-      <Project>{E059E49E-3CC5-48EF-3019-B42B280F4E8A}</Project>
-      <Name>UnityVS.Twin Stick Cuber.CSharp</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityVS.Twin Stick Cuber.UnityScript.unityproj">
       <Project>{FC29F357-A75D-B92F-CF57-FDA301E6A4C7}</Project>
       <Name>UnityVS.Twin Stick Cuber.UnityScript</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityVS.Twin Stick Cuber.CSharp.csproj">
+      <Project>{E059E49E-3CC5-48EF-3019-B42B280F4E8A}</Project>
+      <Name>UnityVS.Twin Stick Cuber.CSharp</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -120,32 +111,6 @@
     <Compile Include="Assets\6by7\ProBuilder\Editor\pb_Preferences.cs" />
     <Compile Include="Assets\6by7\ProBuilder\Editor\ProBuilderMenuItems.cs" />
     <Compile Include="Assets\6by7\ProBuilder\Install\Editor\QuickStart.cs" />
-    <Compile Include="Assets\PrimitivesPro\Editor\ArcGizmoEditor.cs" />
-    <Compile Include="Assets\PrimitivesPro\Editor\CreateArc.cs" />
-    <Compile Include="Assets\PrimitivesPro\Editor\CreateBooleanOp.cs" />
-    <Compile Include="Assets\PrimitivesPro\Editor\CreateBox.cs" />
-    <Compile Include="Assets\PrimitivesPro\Editor\CreateCapsule.cs" />
-    <Compile Include="Assets\PrimitivesPro\Editor\CreateCircle.cs" />
-    <Compile Include="Assets\PrimitivesPro\Editor\CreateCone.cs" />
-    <Compile Include="Assets\PrimitivesPro\Editor\CreateCuttingPlane.cs" />
-    <Compile Include="Assets\PrimitivesPro\Editor\CreateCylinder.cs" />
-    <Compile Include="Assets\PrimitivesPro\Editor\CreateEllipse.cs" />
-    <Compile Include="Assets\PrimitivesPro\Editor\CreateEllipsoid.cs" />
-    <Compile Include="Assets\PrimitivesPro\Editor\CreateGeoSphere.cs" />
-    <Compile Include="Assets\PrimitivesPro\Editor\CreatePlane.cs" />
-    <Compile Include="Assets\PrimitivesPro\Editor\CreatePyramid.cs" />
-    <Compile Include="Assets\PrimitivesPro\Editor\CreateRing.cs" />
-    <Compile Include="Assets\PrimitivesPro\Editor\CreateRoundedCube.cs" />
-    <Compile Include="Assets\PrimitivesPro\Editor\CreateSphere.cs" />
-    <Compile Include="Assets\PrimitivesPro\Editor\CreateSphericalCone.cs" />
-    <Compile Include="Assets\PrimitivesPro\Editor\CreateSuperEllipsoid.cs" />
-    <Compile Include="Assets\PrimitivesPro\Editor\CreateTorus.cs" />
-    <Compile Include="Assets\PrimitivesPro\Editor\CreateTorusKnot.cs" />
-    <Compile Include="Assets\PrimitivesPro\Editor\CreateTriangle.cs" />
-    <Compile Include="Assets\PrimitivesPro\Editor\CreateTube.cs" />
-    <Compile Include="Assets\PrimitivesPro\Editor\CustomDefaultObject.cs" />
-    <Compile Include="Assets\PrimitivesPro\Editor\MenuDefinition.cs" />
-    <Compile Include="Assets\PrimitivesPro\Editor\Utils.cs" />
     <None Include="Assets\6by7\ProBuilder\API Examples\Instantiation\README.txt" />
     <None Include="Assets\6by7\ProBuilder\changelog.txt" />
     <None Include="Assets\6by7\ProBuilder\Credits.txt" />
@@ -231,8 +196,6 @@
     <None Include="Assets\Packages\UnityVS\Editor\SyntaxTree.VisualStudio.Unity.Bridge.dll" />
     <None Include="Assets\Packages\UnityVS\Editor\SyntaxTree.VisualStudio.Unity.Messaging.dll" />
     <None Include="Assets\Packages\UnityVS\Editor\UnityVS.VersionSpecific.dll" />
-    <None Include="C:\Program Files (x86)\Unity\Editor\Data\UnityExtensions\Unity\GUISystem\4.6.0\Editor\UnityEditor.UI.dll" />
-    <None Include="C:\Program Files (x86)\Unity\Editor\Data\UnityExtensions\Unity\GUISystem\4.6.0\UnityEngine.UI.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.CSharp.targets" />
 </Project>

@@ -4,7 +4,7 @@ using System.Collections;
 
 public class Enemy : MonoBehaviour {
 
-    public float speed;
+    public float speed, downForce;
     public GameObject target;
     public ForceMode mode;
     public GameObject pickupPrefab;
@@ -19,6 +19,35 @@ public class Enemy : MonoBehaviour {
         targetController = targets[Random.Range(0, targets.Length)];
         target = targetController.gameObject;
         Arena.instance.enemies.Add(this);
+
+        switch (Settings.instance.speed.selection)
+        {
+            case 0:
+                speed = 50;
+                downForce = 20;
+                break;
+            case 1:
+                speed = 100;
+                downForce = 30;
+                break;
+            case 2:
+                speed = 150;
+                downForce = 35;
+                break;
+            case 3:
+                speed = 200;
+                downForce = 40;
+                break;
+            case 4:
+                speed = 250;
+                downForce = 45;
+                break;
+            case 5:
+                speed = 300;
+                downForce = 50;
+                break;
+        } 
+
 	}
 
     void OnCollisionEnter(Collision hit)
@@ -108,6 +137,7 @@ public class Enemy : MonoBehaviour {
 	void FixedUpdate () {
         var direction =  target.transform.position - transform.position;
         direction.Normalize();
+        rigidbody.AddForce(Vector3.down * downForce);
         rigidbody.AddTorque(Vector3.Cross( Vector3.up, direction) * speed, mode);
 
         if (targetController.dead)

@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.Twin Stick Cuber.CSharp", "UnityVS.Twin Stick Cuber.CSharp.csproj", "{E059E49E-3CC5-48EF-3019-B42B280F4E8A}"
-EndProject
 Project("{1FAC5C55-277D-4884-94A4-83DBDAF57E56}") = "UnityVS.Twin Stick Cuber.UnityScript", "UnityVS.Twin Stick Cuber.UnityScript.unityproj", "{FC29F357-A75D-B92F-CF57-FDA301E6A4C7}"
 EndProject
 Project("{1FAC5C55-277D-4884-94A4-83DBDAF57E56}") = "UnityVS.Twin Stick Cuber.UnityScript.Editor", "UnityVS.Twin Stick Cuber.UnityScript.Editor.unityproj", "{B15C2AB8-A89B-BDD5-321B-A1884C75421F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.Twin Stick Cuber.CSharp", "UnityVS.Twin Stick Cuber.CSharp.csproj", "{E059E49E-3CC5-48EF-3019-B42B280F4E8A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.Twin Stick Cuber.CSharp.Editor", "UnityVS.Twin Stick Cuber.CSharp.Editor.csproj", "{9472DC99-084F-6172-99C0-802021ECFC5B}"
 EndProject
@@ -19,10 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E059E49E-3CC5-48EF-3019-B42B280F4E8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E059E49E-3CC5-48EF-3019-B42B280F4E8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E059E49E-3CC5-48EF-3019-B42B280F4E8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E059E49E-3CC5-48EF-3019-B42B280F4E8A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FC29F357-A75D-B92F-CF57-FDA301E6A4C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FC29F357-A75D-B92F-CF57-FDA301E6A4C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC29F357-A75D-B92F-CF57-FDA301E6A4C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -31,6 +27,10 @@ Global
 		{B15C2AB8-A89B-BDD5-321B-A1884C75421F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B15C2AB8-A89B-BDD5-321B-A1884C75421F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B15C2AB8-A89B-BDD5-321B-A1884C75421F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E059E49E-3CC5-48EF-3019-B42B280F4E8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E059E49E-3CC5-48EF-3019-B42B280F4E8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E059E49E-3CC5-48EF-3019-B42B280F4E8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E059E49E-3CC5-48EF-3019-B42B280F4E8A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9472DC99-084F-6172-99C0-802021ECFC5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9472DC99-084F-6172-99C0-802021ECFC5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9472DC99-084F-6172-99C0-802021ECFC5B}.Release|Any CPU.ActiveCfg = Release|Any CPU

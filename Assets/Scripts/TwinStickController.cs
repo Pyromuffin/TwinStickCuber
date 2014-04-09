@@ -55,7 +55,7 @@ public class TwinStickController : MonoBehaviour {
    
 	// Update is called once per frame
 	void FixedUpdate () {
-        pad.Update();
+        
 
         Vector3 dir = new Vector3(pad.LeftStick.x, 0, pad.LeftStick.y);
         Vector3 rightDir = new Vector3(pad.RightStick.x, 0, pad.RightStick.y);
@@ -119,7 +119,7 @@ public class TwinStickController : MonoBehaviour {
         //shoot
         if (pad.RightStick.magnitude > .1f && reloadTimer == 0 && !charging && !swording)
         {
-            audio.PlayOneShot(shoot);
+            audio.PlayOneShot(shoot, .5f);
             Shoot(pad.RightStick.normalized);
             reloadTimer = reloadTime;
         }
@@ -203,7 +203,37 @@ public class TwinStickController : MonoBehaviour {
             chargeTimer = 0;
         }        
 
+        //falling through the world or something
+        if (transform.position.y < -20)
+        {
+            transform.Translate(Vector3.up * 50);
+        }
+
+    
 	}
+
+    void Update()
+    {
+        pad.Update();
+        
+        if (pad.GetButtonDown(button.Start))
+        {
+            if (!PauseUI.instance.paused)
+                PauseUI.instance.pause();
+            else
+                PauseUI.instance.unpause();
+
+        }
+
+        if (PauseUI.instance.paused && pad.GetButtonDown(button.Select))
+        {
+            PauseUI.instance.unpause();
+            Application.LoadLevel(0);
+        }
+
+        
+
+    }
 
 
     IEnumerator cut(Vector3 cutDirection)
@@ -241,6 +271,7 @@ public class TwinStickController : MonoBehaviour {
     void Shoot(Vector2 dir)
     {
         var bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity) as GameObject;
+        Physics.IgnoreCollision(bullet.collider, collider);
         StartCoroutine(pad.vibrateTime(.2f, 0, .1f));
         bullet.rigidbody.AddForce(new Vector3(dir.x, 0, dir.y) * bulletForce);
         rigidbody.AddForce(-new Vector3(dir.x, 0, dir.y) * bulletForce);
@@ -259,7 +290,7 @@ public class TwinStickController : MonoBehaviour {
             Destroy(hit.gameObject);   
 
         }
-        if (hit.gameObject.layer == LayerMask.NameToLayer("Enemy") && !dead)
+        if (!dead && (hit.gameObject.layer == LayerMask.NameToLayer("Enemy") || hit.gameObject.layer == LayerMask.NameToLayer("Bullet")) )
         {
             for(int i = 0; i < dieBulletCount; i++)
             {

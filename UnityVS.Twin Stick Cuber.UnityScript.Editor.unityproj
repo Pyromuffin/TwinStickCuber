@@ -70,24 +70,15 @@
     <Reference Include="XInputDotNetPure">
       <HintPath>Assets\Plugins\x86_64\XInputDotNetPure.dll</HintPath>
     </Reference>
-    <Reference Include="Poly2Tri">
-      <HintPath>Assets\PrimitivesPro\Scripts\Triangulation\Poly2Tri.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>C:\Program Files (x86)\Unity\Editor\Data\UnityExtensions\Unity\GUISystem\4.6.0\Editor\UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>C:\Program Files (x86)\Unity\Editor\Data\UnityExtensions\Unity\GUISystem\4.6.0\UnityEngine.UI.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="UnityVS.Twin Stick Cuber.CSharp.csproj">
-      <Project>{E059E49E-3CC5-48EF-3019-B42B280F4E8A}</Project>
-      <Name>UnityVS.Twin Stick Cuber.CSharp</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityVS.Twin Stick Cuber.UnityScript.unityproj">
       <Project>{FC29F357-A75D-B92F-CF57-FDA301E6A4C7}</Project>
       <Name>UnityVS.Twin Stick Cuber.UnityScript</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityVS.Twin Stick Cuber.CSharp.csproj">
+      <Project>{E059E49E-3CC5-48EF-3019-B42B280F4E8A}</Project>
+      <Name>UnityVS.Twin Stick Cuber.CSharp</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -189,8 +180,6 @@
     <None Include="Assets\Packages\UnityVS\Editor\SyntaxTree.VisualStudio.Unity.Bridge.dll" />
     <None Include="Assets\Packages\UnityVS\Editor\SyntaxTree.VisualStudio.Unity.Messaging.dll" />
     <None Include="Assets\Packages\UnityVS\Editor\UnityVS.VersionSpecific.dll" />
-    <None Include="C:\Program Files (x86)\Unity\Editor\Data\UnityExtensions\Unity\GUISystem\4.6.0\Editor\UnityEditor.UI.dll" />
-    <None Include="C:\Program Files (x86)\Unity\Editor\Data\UnityExtensions\Unity\GUISystem\4.6.0\UnityEngine.UI.dll" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets" />
@@ -217,16 +206,6 @@
     <Folder Include="Assets\Packages\UnityVS" />
     <Folder Include="Assets\Packages\UnityVS\Editor" />
     <Folder Include="Assets\XInputDotNet" />
-    <Folder Include="C:" />
-    <Folder Include="C:\Program Files (x86)" />
-    <Folder Include="C:\Program Files (x86)\Unity" />
-    <Folder Include="C:\Program Files (x86)\Unity\Editor" />
-    <Folder Include="C:\Program Files (x86)\Unity\Editor\Data" />
-    <Folder Include="C:\Program Files (x86)\Unity\Editor\Data\UnityExtensions" />
-    <Folder Include="C:\Program Files (x86)\Unity\Editor\Data\UnityExtensions\Unity" />
-    <Folder Include="C:\Program Files (x86)\Unity\Editor\Data\UnityExtensions\Unity\GUISystem" />
-    <Folder Include="C:\Program Files (x86)\Unity\Editor\Data\UnityExtensions\Unity\GUISystem\4.6.0" />
-    <Folder Include="C:\Program Files (x86)\Unity\Editor\Data\UnityExtensions\Unity\GUISystem\4.6.0\Editor" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.UnityScript.targets" />
 </Project>

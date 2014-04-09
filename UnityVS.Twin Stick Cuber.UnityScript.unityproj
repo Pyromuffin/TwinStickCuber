@@ -58,9 +58,6 @@
     <Reference Include="XInputDotNetPure">
       <HintPath>Assets\Plugins\x86_64\XInputDotNetPure.dll</HintPath>
     </Reference>
-    <Reference Include="Poly2Tri">
-      <HintPath>Assets\PrimitivesPro\Scripts\Triangulation\Poly2Tri.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Packages\Standard Assets\Image Effects (Pro Only)\AmbientObscurance.js" />
@@ -172,7 +169,6 @@
     <None Include="Assets\XInputDotNet\MITLicense.txt" />
     <None Include="Assets\6by7\ProBuilder\Classes\ProBuilderCore.dll" />
     <None Include="Assets\6by7\Shared\Code\SixBySeven.dll" />
-    <None Include="Assets\PrimitivesPro\Scripts\Triangulation\Poly2Tri.dll" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets" />
@@ -196,9 +192,6 @@
     <Folder Include="Assets\Packages\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares" />
     <Folder Include="Assets\Packages\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField" />
     <Folder Include="Assets\Packages\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch" />
-    <Folder Include="Assets\PrimitivesPro" />
-    <Folder Include="Assets\PrimitivesPro\Scripts" />
-    <Folder Include="Assets\PrimitivesPro\Scripts\Triangulation" />
     <Folder Include="Assets\XInputDotNet" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.UnityScript.targets" />
